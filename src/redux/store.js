@@ -3,12 +3,12 @@ import { configureStore } from '@reduxjs/toolkit';
 // import {
 //   persistStore,
 //   persistReducer,
-//   FLUSH,
-//   REHYDRATE,
-//   PAUSE,
-//   PERSIST,
-//   PURGE,
-//   REGISTER,
+// FLUSH,
+// REHYDRATE,
+// PAUSE,
+// PERSIST,
+// PURGE,
+// REGISTER,
 // } from 'redux-persist';
 import { contact } from './contact/contact';
 import { contactsApi } from './contact/contactsSlice';
@@ -31,12 +31,12 @@ export const store = configureStore({
     ...getDefaultMiddleware(),
     contactsApi.middleware,
   ],
-  // getDefaultMiddleware =>
-  // getDefaultMiddleware({
-  //   serializableCheck: {
-  //     ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-  //   },
+  //   getDefaultMiddleware =>
+  //   getDefaultMiddleware({
+  //     serializableCheck: {
+  //       ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+  //     },
+  // });
 });
-// });
 
 // export const persistor = persistStore(store);
