@@ -1,4 +1,4 @@
-import css from 'components/ContactForm/ContactForm.module.css';
+import css from './ContactForm.module.css';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContacts } from 'redux/contact/contact';

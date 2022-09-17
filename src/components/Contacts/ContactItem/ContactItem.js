@@ -1,4 +1,4 @@
-import css from 'components/ContactItem/ContactItem.module.css';
+import css from './ContactItem.module.css';
 // import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeContacts } from 'redux/contact/contact';

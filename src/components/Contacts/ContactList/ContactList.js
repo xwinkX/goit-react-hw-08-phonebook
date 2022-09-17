@@ -1,5 +1,5 @@
-import ContactItem from 'components/ContactItem/ContactItem';
-import css from 'components/ContactList/ContactList.module.css';
+import ContactItem from '../ContactItem/ContactItem';
+import css from './ContactList.module.css';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
