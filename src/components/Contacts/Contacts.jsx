@@ -4,8 +4,16 @@ import Filter from './Filter/Filter';
 
 const Contacts = () => {
   return (
-    <div>
-      <h1>Phonebook</h1>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: 16,
+        color: '#010101',
+      }}
+    >
       <ContactForm />
       <h2>Contacts</h2>
       <Filter />
