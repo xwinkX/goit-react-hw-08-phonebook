@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import UserRoutes from './UserRoutes';
 import { useSelector } from 'react-redux';
-import Menu from './Menu/Menu';
+// import Menu from './Menu/Menu';
 
 export default function App() {
   const contacts = useSelector(state => state.contact.items);

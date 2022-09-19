@@ -1,7 +1,7 @@
 import css from './Register.module.css';
 import { useState } from 'react';
 
-const Register = () => {
+const Register = ({ onSubmit }) => {
   const initialState = {
     name: '',
     email: '',
@@ -9,18 +9,19 @@ const Register = () => {
   };
   const [state, setState] = useState({ ...initialState });
 
+  const handleChange = ({ target }) => {
+    const { name, value } = target;
+
+    setState(prevState => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
   const handleSubmit = e => {
     e.preventDefault();
-    const form = e.currentTarget;
-    const data = {
-      name: form.elements.name.value,
-      number: form.elements.email.value,
-      password: form.elements.password.value,
-    };
-    // onSubmit({ ...state });
-    setState({ ...data });
+    onSubmit({ ...state });
+    setState({ ...initialState });
   };
-
   //   const { state, handleChange, handleSubmit } = useForm({
   //     initialState,
   //     onSubmit,
@@ -37,7 +38,7 @@ const Register = () => {
         <input
           value={name}
           name="name"
-          //   onChange={handleChange}
+          onChange={handleChange}
           className={css.input}
           type="text"
           placeholder="Введите имя пользователя"
@@ -51,7 +52,7 @@ const Register = () => {
         <input
           value={email}
           name="email"
-          //   onChange={handleChange}
+          onChange={handleChange}
           className={css.input}
           type="email"
           placeholder="Введите email пользователя"
@@ -64,7 +65,7 @@ const Register = () => {
         <input
           value={password}
           name="password"
-          //   onChange={handleChange}
+          onChange={handleChange}
           className={css.input}
           type="password"
           placeholder="Введите пароль пользователя"
