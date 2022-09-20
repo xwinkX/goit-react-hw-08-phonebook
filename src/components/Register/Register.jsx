@@ -1,4 +1,4 @@
-import css from './Register.module.css';
+import css from '../Register/Register.module.css';
 import { useState } from 'react';
 
 const Register = ({ onSubmit }) => {
