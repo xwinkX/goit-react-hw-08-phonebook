@@ -1,4 +1,4 @@
-// import css from '../Register/Register.module.css';
+import css from '../Register/Register.module.css';
 import { useState } from 'react';
 
 const Register = ({ onSubmit }) => {
@@ -27,41 +27,47 @@ const Register = ({ onSubmit }) => {
 
   return (
     <form action="" onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="">Имя:</label>
+      <div className={css.group}>
+        <label className={css.label} htmlFor="">
+          Имя:
+        </label>
         <input
           value={name}
           name="name"
           onChange={handleChange}
-          //   className={css.input}
+          className={css.input}
           type="text"
           placeholder="Введите имя пользователя"
           required
         />
       </div>
-      <div>
-        <label htmlFor="">Email:</label>
+      <div className={css.group}>
+        <label className={css.label} htmlFor="">
+          Email:
+        </label>
         <input
           value={email}
           name="email"
           onChange={handleChange}
-          //   className={css.input}
+          className={css.input}
           type="email"
           placeholder="Введите email пользователя"
         />
       </div>
-      <div>
-        <label htmlFor="">Пароль:</label>
+      <div className={css.group}>
+        <label className={css.label} htmlFor="">
+          Пароль:
+        </label>
         <input
           value={password}
           name="password"
           onChange={handleChange}
-          //   className={css.input}
+          className={css.input}
           type="password"
           placeholder="Введите пароль пользователя"
         />
       </div>
-      <div>
+      <div className={css.group}>
         <button type="submit">Регистрация</button>
       </div>
     </form>
