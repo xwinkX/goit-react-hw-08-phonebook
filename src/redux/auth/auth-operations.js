@@ -9,9 +9,24 @@ export const signup = createAsyncThunk(
       const result = await api.signup(data);
       return result;
     } catch ({ response }) {
-      console.log(response);
       const { status, statusText } = response;
-      console.log(data);
+      const error = {
+        status,
+        message: statusText,
+      };
+      return rejectWithValue(error);
+    }
+  }
+);
+
+export const login = createAsyncThunk(
+  'auth/login',
+  async (data, { rejectWithValue }) => {
+    try {
+      const result = await api.login(data);
+      return result;
+    } catch ({ response }) {
+      const { status, statusText } = response;
       const error = {
         status,
         message: statusText,

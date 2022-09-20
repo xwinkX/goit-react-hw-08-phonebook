@@ -22,10 +22,6 @@ const Register = ({ onSubmit }) => {
     onSubmit({ ...state });
     setState({ ...initialState });
   };
-  //   const { state, handleChange, handleSubmit } = useForm({
-  //     initialState,
-  //     onSubmit,
-  //   });
 
   const { name, email, password } = state;
 
