@@ -1,8 +1,15 @@
 import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
+import {
+  useDeleteContactMutation,
+  useFetchContactsQuery,
+} from '../../redux/contact/contactSlice';
 
 const Contacts = () => {
+  const { data, isFetching } = useFetchContactsQuery();
+  const [deleteContact] = useDeleteContactMutation();
+
   return (
     <div
       style={{
@@ -14,10 +21,11 @@ const Contacts = () => {
         color: '#010101',
       }}
     >
-      <ContactForm />
+      <ContactForm contacts={data} />
       <h2>Contacts</h2>
       <Filter />
-      <ContactList />
+      {isFetching && <p>...loading</p>}
+      {data && <ContactList contacts={data} onDelete={deleteContact} />}
     </div>
   );
 };

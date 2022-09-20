@@ -1,14 +1,14 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import UserRoutes from './UserRoutes';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 // import Menu from './Menu/Menu';
 
 export default function App() {
-  const contacts = useSelector(state => state.contact.items);
+  // const contacts = useSelector(state => state.contact.items);
 
-  useEffect(() => {
-    localStorage.setItem('contacts', JSON.stringify(contacts));
-  }, [contacts]);
+  // useEffect(() => {
+  //   localStorage.setItem('contacts', JSON.stringify(contacts));
+  // }, [contacts]);
 
   return (
     <div
