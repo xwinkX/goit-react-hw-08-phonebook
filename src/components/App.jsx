@@ -1,5 +1,6 @@
 // import { useEffect } from 'react';
 import UserRoutes from './UserRoutes';
+// import Header from './Header/Header';
 // import { useSelector } from 'react-redux';
 // import Menu from './Menu/Menu';
 
@@ -21,6 +22,7 @@ export default function App() {
         color: '#010101',
       }}
     >
+      {/* <Header /> */}
       <UserRoutes />
     </div>
   );

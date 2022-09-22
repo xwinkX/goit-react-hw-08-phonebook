@@ -14,15 +14,11 @@ export const fetchContacts = createAsyncThunk(
   }
 );
 
-const isDublicate = ({ title, author }, books) => {
-  const normalizedTitle = title.toLowerCase();
-  const normalizedAuthor = author.toLowerCase();
+const isDublicate = ({ name }, contacts) => {
+  const normalizedName = name.toLowerCase();
 
-  const result = books.find(item => {
-    return (
-      normalizedTitle === item.title.toLowerCase() &&
-      normalizedAuthor === item.author.toLowerCase()
-    );
+  const result = contacts.find(item => {
+    return normalizedName === item.name.toLowerCase();
   });
 
   return Boolean(result);

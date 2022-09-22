@@ -3,15 +3,15 @@ import css from './Filter.module.css';
 // import { useDispatch } from 'react-redux';
 // import { filterContacts } from 'redux/contacts/contact';
 
-const Filter = ({OnSetFilter, filter}) => {
+const Filter = ({ onSetFilter, filter }) => {
   // const dispatch = useDispatch();
-  return (
+    return (
     <>
       <h2 className={css.h2}>Find contacts by name</h2>
       <label>
         <input
           type="text"
-          onChange={OnSetFilter}
+          onChange={onSetFilter}
           value={filter}
           name="filter"
         />

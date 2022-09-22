@@ -5,7 +5,7 @@ export const getFilteredContacts = ({ contacts, filter }) => {
     return contacts.items;
   }
   const normalizedFilter = filter.toLowerCase();
-  const result = contacts.filter(contact =>
+  const result = contacts.items.filter(contact =>
     contact.name.toLowerCase().includes(normalizedFilter)
   );
   return result;
