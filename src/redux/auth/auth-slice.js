@@ -7,6 +7,7 @@ const initialState = {
   token: '',
   loading: false,
   error: null,
+  isFetchingCurrentUser: false,
 };
 
 const authSlice = createSlice({
@@ -56,16 +57,18 @@ const authSlice = createSlice({
       store.error = payload;
     },
     [current.pending]: store => {
+      store.isFetchingCurrentUser = true;
       store.loading = true;
       store.error = null;
     },
     [current.fulfilled]: (store, { payload }) => {
+      store.isFetchingCurrentUser = false;
       store.loading = false;
       store.user = payload;
-      // store.token = payload.token;
       store.isLogin = true;
     },
     [current.rejected]: (store, { payload }) => {
+      store.isFetchingCurrentUser = false;
       store.loading = false;
       store.token = '';
       store.error = payload;

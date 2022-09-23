@@ -5,10 +5,12 @@ import UserRoutes from './UserRoutes';
 
 import { current } from '../redux/auth/auth-operations';
 import { getToken } from 'redux/auth/auth-selectors';
+import { getIsFetchingCurrent } from 'redux/auth/auth-selectors';
 
 export default function App() {
   const dispatch = useDispatch();
   const token = useSelector(getToken);
+  const isFetchingCurrentUser = useSelector(getIsFetchingCurrent);
 
   useEffect(() => {
     if (token) {
@@ -17,17 +19,19 @@ export default function App() {
   }, [dispatch, token]);
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 16,
-        color: '#010101',
-      }}
-    >
-      <UserRoutes />
-    </div>
+    !isFetchingCurrentUser && (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontSize: 16,
+          color: '#010101',
+        }}
+      >
+        <UserRoutes />
+      </div>
+    )
   );
 }
