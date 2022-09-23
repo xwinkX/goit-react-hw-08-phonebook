@@ -38,7 +38,6 @@ const Contacts = () => {
   };
 
   const onRemoveContact = id => {
-    // console.log(id);
     dispatch(removeContact(id));
   };
   const onSetFilter = ({ target }) => {

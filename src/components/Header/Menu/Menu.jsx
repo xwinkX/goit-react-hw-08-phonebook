@@ -1,12 +1,9 @@
 import { NavLink } from 'react-router-dom';
 
-
-const Menu = ({getClassName}) => {
+const Menu = () => {
   return (
     <>
-      <NavLink to="/contacts" className={getClassName}>
-        Contacts
-      </NavLink>
+      <NavLink to="/contacts">{/* Contacts */}</NavLink>
     </>
   );
 };

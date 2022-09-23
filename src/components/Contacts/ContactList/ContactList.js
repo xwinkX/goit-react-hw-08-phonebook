@@ -1,14 +1,9 @@
 import ContactItem from '../ContactItem/ContactItem';
 import css from './ContactList.module.css';
 import PropTypes from 'prop-types';
-// import { useSelector } from 'react-redux';
+
 
 const ContactList = ({ contacts, onDelete }) => {
-  // const filter = useSelector(state => state.contact.filter);
-  // const normalizedFilter = filter.toLowerCase();
-  // const resultFilter = contacts.filter(contact =>
-  //   contact.name.toLowerCase().includes(normalizedFilter)
-  // );
 
   return (
     <ul className={css.ul}>

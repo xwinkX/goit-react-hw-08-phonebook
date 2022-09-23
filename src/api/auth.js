@@ -16,4 +16,21 @@ export const login = async data => {
   return result;
 };
 
+export const logout = async () => {
+  const data = await instance.post('/users/logout');
+  instance.defaults.headers.common.authorization = '';
+  return data;
+};
+
+export const getCurrent = async token => {
+  try {
+    instance.defaults.headers.common.authorization = `Bearer ${token}`;
+    const { data } = await instance.get('/users/current');
+    return data;
+  } catch (error) {
+    instance.defaults.headers.common.authorization = '';
+    throw error;
+  }
+};
+
 export default instance;
