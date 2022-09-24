@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Register from 'components/Register/Register';
 import { signup } from '../../redux/auth/auth-operations';
 import { getAuthError } from 'redux/auth/auth-selectors';
+import Typography from '@mui/material/Typography';
 
 const RegisterPage = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,9 @@ const RegisterPage = () => {
         color: '#010101',
       }}
     >
-      <h2>Register Page</h2>
+      <Typography variant="h5" component="h5" sx={{ flexGrow: 1, mb: 1 }}>
+        Register Page
+      </Typography>
       <Register onSubmit={onRegister} />
       {status && <p>{message}</p>}
     </div>

@@ -2,6 +2,7 @@ import Login from '../../components/Login/Login';
 import { useSelector, useDispatch } from 'react-redux';
 import { login } from '../../redux/auth/auth-operations';
 import { getAuthError } from 'redux/auth/auth-selectors';
+import Typography from '@mui/material/Typography';
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,9 @@ const LoginPage = () => {
         color: '#010101',
       }}
     >
-      <h2>Login Page</h2>
+      <Typography variant="h5" component="h5" sx={{ flexGrow: 1, mb: 1 }}>
+        Login Page
+      </Typography>
       <Login onSubmit={onLogin} />
       {status && <p>{message}</p>}
     </div>

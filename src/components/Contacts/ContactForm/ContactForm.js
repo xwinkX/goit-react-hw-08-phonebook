@@ -1,7 +1,9 @@
 import css from './ContactForm.module.css';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-// import { useCreateContactMutation } from '../../../redux/contacts/contactSlice';
+import Typography from '@mui/material/Typography';
+import { TextField } from '@mui/material';
+import Button from '@mui/material/Button';
 
 const ContactForm = ({ onSubmit }) => {
   const initialState = {
@@ -28,9 +30,12 @@ const ContactForm = ({ onSubmit }) => {
 
   return (
     <form className={css.contactForm} action="" onSubmit={handleSubmit}>
-      <h2>Name</h2>
+      <Typography variant="h6" component="span" sx={{ flexGrow: 1 }}>
+        Name
+      </Typography>
       <label>
-        <input
+        <TextField         
+          size="small"
           type="text"
           onChange={handleChange}
           name="name"
@@ -40,9 +45,12 @@ const ContactForm = ({ onSubmit }) => {
           required
         />
       </label>
-      <h2>Number</h2>
+      <Typography variant="h6" component="span" sx={{ flexGrow: 1 }}>
+        Number
+      </Typography>
       <label>
-        <input
+        <TextField
+          size="small"
           type="tel"
           onChange={handleChange}
           name="number"
@@ -53,7 +61,9 @@ const ContactForm = ({ onSubmit }) => {
           className={css.input}
         />
       </label>
-      <button type="submit">Add contact</button>
+      <Button type="submit" variant="contained">
+        Add contact
+      </Button>
     </form>
   );
 };

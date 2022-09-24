@@ -33,7 +33,6 @@ const Login = ({ onSubmit }) => {
           Email:
         </label>
         <TextField
-          defaultValue="Small"
           size="small"
           value={email}
           name="email"
@@ -47,7 +46,6 @@ const Login = ({ onSubmit }) => {
           Пароль:
         </label>
         <TextField
-          defaultValue="Small"
           size="small"
           value={password}
           name="password"
@@ -60,7 +58,7 @@ const Login = ({ onSubmit }) => {
         <Button type="submit" variant="contained">
           Logout
         </Button>
-        </div>
+      </div>
     </form>
   );
 };

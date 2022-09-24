@@ -34,7 +34,6 @@ const Register = ({ onSubmit }) => {
           Имя:
         </label>
         <TextField
-          defaultValue="Small"
           size="small"
           value={name}
           name="name"
@@ -50,7 +49,6 @@ const Register = ({ onSubmit }) => {
           Email:
         </label>
         <TextField
-          defaultValue="Small"
           size="small"
           value={email}
           name="email"
@@ -65,7 +63,6 @@ const Register = ({ onSubmit }) => {
           Пароль:
         </label>
         <TextField
-          defaultValue="Small"
           size="small"
           value={password}
           name="password"

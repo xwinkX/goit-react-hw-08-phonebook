@@ -1,15 +1,20 @@
 import css from './ContactItem.module.css';
 import PropTypes from 'prop-types';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 const ContactItem = ({ id, name, number, onDelete }) => {
-
   return (
     <li className={css.li}>
-      <p className={css.p}>{name}</p>
-      <p>{number}</p>
-      <button className={css.button} onClick={() => onDelete(id)}>
-        Удалить
-      </button>
+      <Typography variant="h6" component="span" sx={{ flexGrow: 1, mr: 2 }}>
+        {name}
+      </Typography>
+      <Typography variant="h6" component="span" sx={{ flexGrow: 1, mr: 2 }}>
+        {number}
+      </Typography>
+      <Button variant="contained" onClick={() => onDelete(id)}>
+        Delete
+      </Button>
     </li>
   );
 };
@@ -22,4 +27,3 @@ ContactItem.propTypes = {
   number: PropTypes.string.isRequired,
   onDelete: PropTypes.func.isRequired,
 };
-
