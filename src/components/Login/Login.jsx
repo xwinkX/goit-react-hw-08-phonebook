@@ -57,7 +57,7 @@ const Login = ({ onSubmit }) => {
       </div>
       <div className={css.group}>
         <Button type="submit" variant="contained">
-          Logout
+          Enter
         </Button>
       </div>
     </form>
