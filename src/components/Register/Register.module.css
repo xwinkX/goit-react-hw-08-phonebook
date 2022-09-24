@@ -2,17 +2,11 @@
   display: flex;
   align-items: center;
   margin-bottom: 15px;
+  justify-content: center;
 }
 
 .label {
-  flex: 0 0 150px;
+  flex: 0 0 65px;
   text-align: left;
   color: #606266;
-}
-
-.input {
-  border: 1px solid #c0c4cc;
-  padding: 11px;
-  color: #606266;
-  border-radius: 3px;
 }

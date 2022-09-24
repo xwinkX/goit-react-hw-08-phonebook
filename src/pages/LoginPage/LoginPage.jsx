@@ -12,7 +12,16 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: 16,
+        color: '#010101',
+      }}
+    >
       <h2>Login Page</h2>
       <Login onSubmit={onLogin} />
       {status && <p>{message}</p>}

@@ -1,6 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { getMail } from 'redux/auth/auth-selectors';
 import { logout } from '../../../redux/auth/auth-operations';
+import * as React from 'react';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 const UserMenu = () => {
   const { email } = useSelector(getMail);
@@ -9,12 +13,14 @@ const UserMenu = () => {
   const onLogout = () => dispatch(logout());
 
   return (
-    <div>
-      <span>{email}</span> |
-      <button onClick={onLogout} type="button">
+    <Stack spacing={2} direction="row">
+      <Typography variant="h6" component="span" sx={{ flexGrow: 1 }}>
+        {email}
+      </Typography>
+      <Button variant="contained" onClick={onLogout}>
         Logout
-      </button>
-    </div>
+      </Button>
+    </Stack>
   );
 };
 

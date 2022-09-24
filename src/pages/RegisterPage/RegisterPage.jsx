@@ -12,7 +12,16 @@ const RegisterPage = () => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: 16,
+        color: '#010101',
+      }}
+    >
       <h2>Register Page</h2>
       <Register onSubmit={onRegister} />
       {status && <p>{message}</p>}

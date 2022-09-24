@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import css from './Register.module.css';
+import { TextField } from '@mui/material';
+import Button from '@mui/material/Button';
 
 const Register = ({ onSubmit }) => {
   const initialState = {
@@ -31,7 +33,9 @@ const Register = ({ onSubmit }) => {
         <label className={css.label} htmlFor="">
           Имя:
         </label>
-        <input
+        <TextField
+          defaultValue="Small"
+          size="small"
           value={name}
           name="name"
           onChange={handleChange}
@@ -45,7 +49,9 @@ const Register = ({ onSubmit }) => {
         <label className={css.label} htmlFor="">
           Email:
         </label>
-        <input
+        <TextField
+          defaultValue="Small"
+          size="small"
           value={email}
           name="email"
           onChange={handleChange}
@@ -58,7 +64,9 @@ const Register = ({ onSubmit }) => {
         <label className={css.label} htmlFor="">
           Пароль:
         </label>
-        <input
+        <TextField
+          defaultValue="Small"
+          size="small"
           value={password}
           name="password"
           onChange={handleChange}
@@ -68,7 +76,9 @@ const Register = ({ onSubmit }) => {
         />
       </div>
       <div className={css.group}>
-        <button type="submit">Регистрация</button>
+        <Button type="submit" variant="contained">
+          Registration
+        </Button>
       </div>
     </form>
   );

@@ -1,5 +1,7 @@
 import css from './Login.module.css';
 import { useState } from 'react';
+import { TextField } from '@mui/material';
+import Button from '@mui/material/Button';
 
 const Login = ({ onSubmit }) => {
   const initialState = {
@@ -30,11 +32,12 @@ const Login = ({ onSubmit }) => {
         <label className={css.label} htmlFor="">
           Email:
         </label>
-        <input
+        <TextField
+          defaultValue="Small"
+          size="small"
           value={email}
           name="email"
           onChange={handleChange}
-          className={css.input}
           type="email"
           placeholder="Введите email пользователя"
         />
@@ -43,18 +46,21 @@ const Login = ({ onSubmit }) => {
         <label className={css.label} htmlFor="">
           Пароль:
         </label>
-        <input
+        <TextField
+          defaultValue="Small"
+          size="small"
           value={password}
           name="password"
           onChange={handleChange}
-          className={css.input}
           type="password"
           placeholder="Введите пароль пользователя"
         />
       </div>
       <div className={css.group}>
-        <button type="submit">Войти</button>
-      </div>
+        <Button type="submit" variant="contained">
+          Logout
+        </Button>
+        </div>
     </form>
   );
 };
