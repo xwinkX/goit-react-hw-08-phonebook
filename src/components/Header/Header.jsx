@@ -21,7 +21,7 @@ const Header = () => {
               component="div"
               sx={{ flexGrow: 1, mr: 2 }}
             >
-              Phone Books
+              Phone Book
             </Typography>
             {islogin && <Menu />}
             {islogin ? <UserMenu /> : <AuthMenu />}
