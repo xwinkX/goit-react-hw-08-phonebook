@@ -50,7 +50,7 @@ const Contacts = () => {
       <Typography
         variant="h4"
         component="h3"
-        sx={{ flexGrow: 1, mb: 2, mt: 2 }}
+        sx={{ flexGrow: 1, mb: 1, mt: 2 }}
       >
         Contacts
       </Typography>
