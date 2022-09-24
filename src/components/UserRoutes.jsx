@@ -10,7 +10,22 @@ const ContactsPages = lazy(() => import('../pages/ContactsPages/ContactsPage'));
 
 const UserRoutes = () => {
   return (
-    <Suspense fallback={<p>....Loading</p>}>
+    <Suspense
+      fallback={
+        <p
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            fontSize: 16,
+            color: '#010101',
+          }}
+        >
+          ....Loading
+        </p>
+      }
+    >
       <Routes>
         <Route path="/" element={<Header />}>
           <Route element={<PublicRoute />}>

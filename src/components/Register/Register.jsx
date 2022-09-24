@@ -2,6 +2,7 @@ import { useState } from 'react';
 import css from './Register.module.css';
 import { TextField } from '@mui/material';
 import Button from '@mui/material/Button';
+import PropTypes from 'prop-types';
 
 const Register = ({ onSubmit }) => {
   const initialState = {
@@ -81,3 +82,7 @@ const Register = ({ onSubmit }) => {
   );
 };
 export default Register;
+
+Register.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};

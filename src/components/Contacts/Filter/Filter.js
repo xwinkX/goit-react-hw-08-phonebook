@@ -1,5 +1,6 @@
 import { TextField } from '@mui/material';
 import Typography from '@mui/material/Typography';
+import PropTypes from 'prop-types';
 
 const Filter = ({ onSetFilter, filter }) => {
   return (
@@ -20,3 +21,8 @@ const Filter = ({ onSetFilter, filter }) => {
   );
 };
 export default Filter;
+
+Filter.propTypes = {
+  filter: PropTypes.string.isRequired,
+  onSetFilter: PropTypes.func.isRequired,
+};

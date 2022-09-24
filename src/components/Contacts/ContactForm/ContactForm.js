@@ -34,7 +34,7 @@ const ContactForm = ({ onSubmit }) => {
         Name
       </Typography>
       <label>
-        <TextField         
+        <TextField
           size="small"
           type="text"
           onChange={handleChange}
@@ -71,5 +71,5 @@ const ContactForm = ({ onSubmit }) => {
 export default ContactForm;
 
 ContactForm.propTypes = {
-  contacts: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
+  onSubmit: PropTypes.func.isRequired,
 };

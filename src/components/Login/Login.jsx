@@ -2,6 +2,7 @@ import css from './Login.module.css';
 import { useState } from 'react';
 import { TextField } from '@mui/material';
 import Button from '@mui/material/Button';
+import PropTypes from 'prop-types';
 
 const Login = ({ onSubmit }) => {
   const initialState = {
@@ -63,3 +64,7 @@ const Login = ({ onSubmit }) => {
   );
 };
 export default Login;
+
+Login.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};

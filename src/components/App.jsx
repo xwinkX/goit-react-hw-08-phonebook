@@ -20,16 +20,7 @@ export default function App() {
 
   return (
     !isFetchingCurrentUser && (
-      <div
-        // style={{
-        //   display: 'flex',
-        //   flexDirection: 'column',
-        //   justifyContent: 'center',
-        //   alignItems: 'center',
-        //   fontSize: 16,
-        //   color: '#010101',
-        // }}
-      >
+      <div>
         <UserRoutes />
       </div>
     )
